@@ -98,4 +98,97 @@ _________lesson3____gitstart____"logging"______
   781  git log --graph decorate
   782  git log --graph --decorate
   783  man git log
+
+
+
 ______________git_clonning__________________
+ 
+  793  mkdir work
+  794  cd work/
+  795  git clone /root/repo/ .
+  796  vim test.txt
+  797  git status
+  798  git commit -m "modifided localcopy"
+  799  git add .
+  800  git commit -m "modifided localcopy"
+  801  ls
+  802  echo "sometimes here would be an `empty ident name` error and we must reassign our gituser and email"
+  803  git config user "sorf2"
+  804  git config user.name "sorf2"
+  805  git config user.mail "sorf2"
+  806  git config user.mail "sorf2@1234.com"
+  807  git config user.email "sorf2@1234.com"
+  808  cd .git
+  809  ls
+  810  cat conf
+  811  cat config 
+  812  vim config 
+  813  echo "I modified the .git/config file, because there should not be any user.mail option, only user.email.option"
+  814  cd ..
+  815  git add .
+  816  git commit -m "changes in new folder work2"
+  817  echo "it was the first way to clone repository"
+  818  mkdir workdir
+  819  rm -rf workdir/
+  820  cd ..
+  821  mkdir git
+  822  mv work/ git
+  823  ls
+  824  mv repo/ git
+  825  ls
+  826  cd git
+  827  mkdir workdir
+  828  cd workdir/
+  829  git clone root@10.63.200.59:repo
+  830  cat /etc/gitconfig 
+  831  git clone root@10.63.200.59:git/repo
+  832  ls
+  833  rm -rf repo
+  834  git clone root@10.63.200.59:git/repo .
+  835  ls
+  836  cd ..
+  837  mkdir github
+  838  cd github/
+  839  git clone https://github.com/mastersorf/experiment1.git
+  840  git status
+  841  ls
+  842  cd experiment1/
+  843  git status
+  844  clear
+  845  ls
+  846  vim readme.md
+  847  git config user.name "developer1"
+  848  git config user.email "developer1@sorf.com"
+  849  cat README
+  850  cat README.md 
+  851  vim README.md 
+  852  git add .
+  853  git commit -m "Added `zero hero` text into README.md"
+  854  git commit -m "Added 'zero hero' text into README.md"
+  855  git status
+  856  vim README.md 
+  857  git status
+  858  git add .
+  859  git push origin master
+  860  git status
+  861  git add .
+  862  git status
+  863  git push origin master
+  864  vim README.md 
+  865  git status
+  866  git commit -m "some text added"
+  867  git push origin master
+  868  cd ..
+  869  ls
+  870  cd ..
+  871  ls
+  872  cp git/repo/githist.txt github/experiment1/githist.txt
+  873  cd github/experiment1/
+  874  git add .
+  875  git commit -m "adding histfile la lessons"
+  876  git push origin master
+  877  history 40 >> githist.txt 
+  878  vim githist.txt 
+  879  history 90 >> githist.txt 
+  880  vim githist.txt 
+  881  history 100 >> githist.txt 
