@@ -1,0 +1,101 @@
+  663  yum install git
+  664  git --version
+  665  git config --global user.name "mastersorf"
+  666  git config --global user.email "sorvilovsv@gmail.com"
+  667  git config --system core.editor "/bin/vim"
+  669  cat /etc/gitconfig 
+  672  git config --system my.editing "/bin/false" #adding our own config
+  673  cat /etc/gitconfig 
+  674  vim /etc/gitconfig # deleting our own config from gitconfig
+  675  cat /etc/gitconfig 
+
+_________lesson2____gitstart__________
+
+  684  mkdir repo
+  685  cd repo
+  686  git init .
+  687  echo Initialized empty Git repository in /root/repo/.git/
+  689  cd .git
+  691  cd branches/
+  693  cd ..
+  694  echo "to deinitalise do: fm -rf git"
+  696  echo "this is readme file" >> readme.md
+  697  echo "this is avalid source file" > source.c
+  698  git status
+  699  clear
+  700  echo "git config user.name "user" \# overrides the global settings of git"
+  701  echo "git config user.email "user@gmail.com" \# overrides the global settings of git step2"
+  702  git status
+  703  git add .
+  704  git status
+  705  echo "testfile" >> test.txt
+  706  git status
+  707  git add test.txt 
+  708  git status
+  709  git commit -m "Testing first commit"
+  710  git status
+  711  vim readme.md 
+  712  git status
+  713  echo "new file" >test2.txt
+  714  git status
+  715  git commit -a -m "Commit tracked files and leaving untracked files as is"
+  716  git status
+  717  git add .
+  718  git commit -m "new text file"
+  719  git status
+  720  mkdir new
+  721  mkdir new1
+  722  echo "test" > /new/test1.txt
+  723  echo "test2" > /new1/test2.txt
+  724  ls
+  725  echo "test2" > /new1/test2.txt
+  726  echo "test1" > /new/new.txt
+  727  echo "test1" > new.txt
+  728  rm -f new.txt 
+  729  ls -lA
+  730  touch new/new.txt
+  731  rm new/new.txt
+  732  echo "test1" > new/new.txt
+  733  echo "test2" > new1/new1.txt
+  734  git status
+  735  git add .
+  736  git status
+  737  git commit -m "new files in new folders"
+  738  git status
+  739  rm test2.txt 
+#rm would NOT remove filetracking from git
+  740  git status
+  741  git commit -m "removed test2.txt"
+  742  git status
+  743  git rm test2.txt
+  744  git status
+#git rm would remove file from git
+  745  ls
+  746  git commit -m "text2.txt removed by git rm"
+  747  git status
+
+_________lesson3____gitstart____"logging"______
+
+  762  mv git.txt githist.txt
+  763  git add .
+  764  git commit -m "Saving a history"
+  765  git status
+  766  vim githist.txt 
+  767  git add .
+  768  git commit -m "Saving a history"
+  769  git status
+  770  git log
+  771  git log --oneline
+  772  git log -p
+  773  git log --test.txt
+  774  git log -- test.txt
+  775  git log --oneline test.txt
+  776  git log --oneline new.txt
+  777  git log --oneline new/new.txt 
+  778  git log --author="master"
+  779  git log --grep="histor"
+  780  git log --graph 
+  781  git log --graph decorate
+  782  git log --graph --decorate
+  783  man git log
+______________git_clonning__________________
