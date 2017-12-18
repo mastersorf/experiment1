@@ -3,3 +3,4 @@
 
 #locally ignore tmp directory
 tmp/*
+*.tmp
