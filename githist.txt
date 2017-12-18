@@ -276,4 +276,208 @@ _________________ignoring_content__globally_and_locally_______
   587  git commit -m "ignoring local tmp folder by adding tmp/* into .gitirnore file"
   588  git status
 
+____________BRANCHING_______la_lesson_______________________________________
+_________________________________________________
 
+
+
+  577  git status
+  578  git add .
+  579  git commit -m ".gitignore local file added"
+  580  mkdir.tmp
+  581  git status
+  582  echo "emty folders are untracked"
+  583  vim .gitignore 
+  584  touch tmp/hello.txt
+  585  git status
+  586  git add .
+  587  git commit -m "ignoring local tmp folder by adding tmp/* into .gitirnore file"
+  588  git status
+  589  cd /root/github/experiment1/
+  590  ls
+  591  echo "____LA______ignoring____content____lecture "
+  592  history 80 >> githist.txt 
+  593  vim githist.txt 
+  594  git add .
+  595  git commit -m "installing git on sorfzbx + lecture ignoring content"
+  596  cd /root/git/repo/.git/
+  597  ls -lA
+  598  cat config
+  599  grep -r "mastersorf"
+  600  grep -r "sorf"
+  601  grep -r "master"
+  602  grep -r "sorvilov"
+  603  cd /etc
+  604  find / -name "*gitconf*"
+  605  pwd
+  606  cd /
+  607  cat root/.gitconfig 
+  608  cd root
+  609  ді
+  610  ды
+  611  ls
+  612  cp .gitconfig /etc/.gitconfig
+  613  cd github/experiment1/
+  614  git commit -m "installing git on sorfzbx + lecture ignoring content"
+  615  rm -f /etc/.gitconfig 
+  616  git config --global user.name "mastersorf"
+  617  git config --global user.email "sorvilovsv@gmail.com"
+  618  git config user.name "devops1"
+  619  git config user.email "devops1@sorf.com"
+  620  git commit -m "installing git on sorfzbx + lecture ignoring content"
+  621  git push origin master
+  622  cd /etc
+  623  ls -lA | grep git
+  624  cd root
+  625  ls -lA 
+  626  ls -lA | grep git
+  627  pwd
+  628  cd /root
+  629  ls -lA | grep git
+  630  git --global --list 
+  631  git config --global --list 
+  632  git config --global --edit 
+  633  git config --list --show-origin
+  634  git config --global --list --show-origin
+  635  fing / -name ".gitconf*"
+  636  find / -name ".gitconf*"
+  637  cd /root
+  638  ls -lA
+  639  cat .gitconfig 
+  640  git config --global user.email "sorvilovsv111@gmail.com"
+  641  cat .gitconfig 
+  642  git config --global user.email "sorvilovsv@gmail.com"
+  643  cat .gitconfig 
+  644  зцв
+  645  pwd
+  646  cd github/
+  647  cd experiment1/.git/
+  648  ls
+  649  cat config 
+  650  clear
+  651  ls
+  652  cat HEAD 
+  653  cat index 
+  654  ls
+  655  cat packed-refs 
+  656  cat COMMIT_EDITMSG 
+  657  cat description 
+  658  cd logs
+  659  ls
+  660  cat HEAD 
+  661  cd refs/
+  662  ls
+  663  cd heads/
+  664  ls
+  665  cat master 
+  666  cd ..
+  667  cat remotes/
+  668  cd remotes/
+  669  ls
+  670  cd origin/
+  671  ls
+  672  cat HEAD 
+  673  cat master 
+  674  cd ../..
+  675  ls
+  676  cd ../..
+  677  pwd
+  678  ls
+  679  cd hooks/
+  680  ls
+  681  ls -lA
+  682  cat prepare-commit-msg.sample 
+  683  ls
+  684  cd ..
+  685  ls
+  686  cd info/
+  687  ls
+  688  cat exclude 
+  689  cd ..
+  690  ls
+  691  cd objects/
+  692  ls
+  693   ls -lA *
+  694  cd 01
+  695  ls
+  696  ls -lA
+  697  cat 01082762281e40d3e71474cd970b2051158da1 
+  698  clear
+  699  cd ../..
+  700  ls
+  701  \cd ..
+  702  git status
+  703  pwd
+  704  git branch
+  705  ls
+  706  git branch dev
+  707  git status
+  708  git branch
+  709  echo "'git branch' shows on what branch we are"
+  710  echo "'git branch dev ' creates a new branch, but we are still on the branch master"
+  711  git checkout dev
+  712  echo "'git checkout dev' changes branch to dev"
+  713  git branch
+  714  ls
+  715  ls -lA
+  716  pwd
+  717  cd ..
+  718  mkdir brancxexp1
+  719  cd brancxexp1/
+  720  git clone https://github.com/mastersorf/experiment1.git .
+  721  ls
+  722  cp /root/git/repo/.gitignore .
+  723  ls -lA
+  724  git add .
+  725  git commit -m ".gitignore localfile added"
+  726  git push origin master
+  727  cat .gitignore 
+  728  clear
+  729  git status
+  730  git branch 
+  731  git branch check -b dev
+  732  git branch checkout -b dev
+  733  clear
+  734  git checkout -b dev
+  735  echo ' 'git checkout -b dev' creates new branch named dev and checkouts to this branch from master branch'
+  736  git branch
+  737  echo 123 >> newfile.txt
+  738  echo 123 >> 123.txt
+  739  echo 123 >> oldfile.txt
+  740  echo 123 >> oldfile.tmp
+  741  git status
+  742  pwd
+  743  ls -la
+  744  cat .gitignore 
+  745  echo 123 >> oldfile.bak
+  746  git status
+  747  git add .
+  748  git commit -m "first branch in project"
+  749  git status
+  750  git checkout master
+  751  ls
+  752  ls -lA
+  753  echo "the files created in dev branch do not exist in master"
+  754  git checkout -b ga #new branch
+  755  ls
+  756  git branch dev
+  757  git checkout -b qa
+  758  git branch master
+  759  ls
+  760  git checkout dev
+  761  git checkout -b qa
+  762  git checkout -b test1
+  763  ls
+  764  git branch
+  765  echo "123123123" > test1only.txt
+  766  git add .
+  767  git commit -m "test1 branch only changes - creating a test1only.txt file"
+  768  git status
+  769  git checkout master
+  770  git status
+  771  ls
+  772  cat test1.txt 
+  773  history 150 >> githist.txt 
+  774  git add .
+  775  vim githist.txt 
+  776  history 200  >> githist.txt 
