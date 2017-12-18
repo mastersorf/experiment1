@@ -192,3 +192,88 @@ ______________git_clonning__________________
   879  history 90 >> githist.txt 
   880  vim githist.txt 
   881  history 100 >> githist.txt 
+
+_____________installing____.git___on zbx.sorf_______
+
+  513  cd /root/git/repo/
+  514  git status
+  515  touch nefile.txt
+  516  git add .
+  517  git commit -m "clear file adding"
+  518  git status
+  519  git config --global user.name "mastersorf"
+  520  git config --global user.mail "sorvilovsv@gmail.com"
+  521  git --global core.excludesfile '/etc/gitignore'
+  
+
+_________________ignoring_content__globally_and_locally_______
+
+522  git config --global core.excludesfile '/etc/gitignore'
+  523  vim /etc/gitignore
+  524  pwd
+  525  git status
+  526  touch source.c source.out
+  527  ls
+  528  git status
+  529  git add .
+  530  git commit -m "adding files, testing exclusion: source.outis untracked"
+  531  git status
+  532  echo "creating local gitignore file"
+  533  vim .gitignore
+  534  echo "locally ugnore .bak"
+  535  echo "locally ignore .bak"
+  536  cp source.c source.bak
+  537  git status
+  538  ls
+  539  ll
+  540  vim .gitignore
+  541  git status
+  542  mv .gitignore .git/
+  543  ls
+  544  ll .git
+  545  ls -lA .git
+  546  git status
+  547  git config --global .gitignore
+  548  history | grep gitign
+  549  git config --global core.excludefile .gitignore
+  550  git status
+  551  cp .git/.gitignore .
+  552  ls -lA
+  553  git status
+  554  vim /etc/gitconfig
+  555  history | grep global
+  556  cd /etc
+  557  ls
+  558  ls -la | grep git
+  559  vim gitconfig 
+  560  rm -f gitconfig 
+  561  find / -name "gitconfig"
+  562  history | grep gitconf
+  563  history | grep excludefil
+  564  git config --global core.excludesfile
+  565  history | grep excludes
+  566  ls
+  567  cd /root/git/repo/
+  568  ls
+  569  mv .git/.gitignore .
+  570  ls -la
+  571  cd .git
+  572  ls -la
+  573  rm -f .gitignore 
+  574  cd ..
+  575  git status
+  576  vim .gitignore 
+  577  git status
+  578  git add .
+  579  git commit -m ".gitignore local file added"
+  580  mkdir.tmp
+  581  git status
+  582  echo "emty folders are untracked"
+  583  vim .gitignore 
+  584  touch tmp/hello.txt
+  585  git status
+  586  git add .
+  587  git commit -m "ignoring local tmp folder by adding tmp/* into .gitirnore file"
+  588  git status
+
+
