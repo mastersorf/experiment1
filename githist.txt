@@ -481,3 +481,195 @@ _________________________________________________
   774  git add .
   775  vim githist.txt 
   776  history 200  >> githist.txt 
+
+
+
+__________________________________merging_________________________________
+  779  git push origin master
+  781  git branch
+  782  ll
+  783  vim README.md 
+  784  git add .
+  785  git commit -m "some updates in README.md"
+  786  git checkout dev
+  787  git status
+  788  touch newfileondevbranch.txt
+  789  git add .
+  790  git commit -m "touch newfileondevbranch.txt"
+  791  git push origin dev
+  792  git checkout qa
+  793  echo "branch new" > branchqa.txt
+  794  git add .
+  795  git commit "echo "branch new" > branchqa.txt"
+  796  git branch
+  797  git push origin qa
+  798  git branch
+  799  git merge dev
+  800  git branch
+  801  git checkout master
+  802  git merge qa
+  803  git checkout qa
+  804  git add .
+  805  git commit -m "mergin branches dev and qa"
+  806  git checkout master
+  807  git merge qa
+  808  ll
+  809  vim .gitignore 
+  810  git add .
+  811  git commit -m "merging qa branch into mastrer branch after merging dev branch into qa branch"
+  812  git push origin master
+  813  vim oldfile.tmp
+  814  git status
+  815  vim .gitignore 
+  816  touch 222.bak
+  817  git status
+  818  touch newtmpfileaftertmpgitignore.tmp
+  819  git status
+  820  git add
+  821  git add .
+  822  git status
+  823  git commit -m "files added before changing in gitignore are tracked"
+  824  mv oldfile.tmp oldfile1.tmp
+  825  git status
+  826* git
+  827  git commit -m "files added before changing in gitignore are tracked, but moving files or removing makes them untracked"
+  828  clear
+  829  git checkout qa
+  830  git status
+  831  git add .
+  832  git commit -m "changes in qa branch"
+  833  git push origin qa
+  834  vim .gitignore 
+  835  ls -la
+  836  git branch
+  837  git checkout ga
+  838  ls -la
+  839  cd ..
+  840  ls
+  841  ls -la
+  842  git branch
+  843  cd brancxexp1/
+  844  ls
+  845  git branch
+  846  cd .git
+  847  ls
+  848  cd branches/
+  849  ls
+  850  ls -la
+  851  cd ..
+  852  ls
+  853  find / -name "qaonl"
+  854  find / -name "*qaonl*"
+  855  find / -name "*qa*"
+  856  find . -name "*qa*"
+  857  find . -name "*dev*"
+  858  ll
+  859  git checkout dev
+  860  ll
+  861  find . -name "newfileondevbr*"
+  862  git checkout ga
+  863  find . -name "newfileondevbr*"
+  864  man find
+  865  grep "newfileondevbr*"
+  866  ls
+  867  cat file5.txt 
+  868  echo exclusiveinfo >> file5.txt 
+  869  grep "exclusi"
+  870  grep -r "exclusi"
+  871  grep -r "newfileondevbr*"
+  872  git chkout dev
+  873  git chekout dev
+  874  git checkout dev
+  875  touch devnewexclusivefile.txt
+  876  git checkout ga
+  877  grep -r "*devnewexclus*"
+  878  git checkout dev
+  879  grep -r "*devnewexclus*"
+  880  grep -r "devnewexclus*"
+  881  grep -r "devnewexclus"
+  882  ll
+  883  grep -r "dev"
+  884  grep -r "devnew"
+  885  ll
+  886  echo devnewexclusive >> devnewexclusivefile.txt 
+  887  grep -r "devnew"
+  888  git checkout ga
+  889  grep -r "devnew"
+  890  ll
+  891  echo ganewexclusive >> ganewexclusivefile.txt 
+  892  git checkout dev
+  893  ll
+  894  grep -r "ganewe"
+  895  git checkout ga
+  896  git add .
+  897  git commit -m "ganewexclusive"
+  898  git checkout dev
+  899  ll
+  900  grep -r "ganewe"
+  901  touch normal.txt
+  902  echo "normal nevermind" >> normal.txt
+  903  git add .
+  904  git commit -m "123"
+  905  git checkout ga
+  906  ll
+  907  cat normal.txt
+  908  grep -r "nevermin"
+  909  grep -r "normal"
+  910  git branch
+  911  touch gafile1
+  912  echo first >> gafile1 
+  913  git checkout -b ga1
+  914  echo second >> gafile1 
+  915  git add .
+  916  git commit -m "1111"
+  917  git branch ga
+  918  git checkout ga
+  919  git add .
+  920  git commit -m "00000"
+  921  echo first  >> gafile1 
+  922  git add .
+  923  git commit -m "00000"
+  924  git checkout ga1
+  925  git merge ga
+  926  git rm file1
+  927  ll
+  928  git rm gafile1
+  929  ll
+  930  git add .
+  931  git commit -m "000"
+  932  git status
+  933  touch fff123.txt
+  934  echo 111111 >> fff123.txt 
+  935  git add .
+  936  git commit -m "111111111"
+  937  git status
+  938  git branch ga2
+  939  echo 222222222 >> fff123.txt 
+  940  git add .
+  941  git commit -m "222222222"
+  942  git checkout ga1
+  943  git checkout ga2
+  944  cat fff123.txt 
+  945  git status
+  946  git checkout ga1
+  947  git status
+  948  cat fff123.txt 
+  949  git branch
+  950  git merge ga2
+  951  cat fff123.txt 
+  952  git checkout ga2
+  953  cat fff123.txt 
+  954  echo 3333333 >> fff123.txt 
+  955  git add .
+  956  git commit -m "333"
+  957  git branch
+  958  git merge ga1
+  959  git checkout ga1
+  960  git merge ga2
+  961  git checkout master
+  962  git commit -a -m "888"
+  963  git merge ga2
+  964  git checkout master
+  965  git log --oneline
+  966  echo "_______merging______" >> githist.txt 
+  967  history 200 >> githist.txt 
